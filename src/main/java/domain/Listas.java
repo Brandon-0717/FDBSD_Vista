@@ -8,10 +8,12 @@ public class Listas {
     
     // Listas para diferentes tipos de datos
     private List<Cliente> clientes;
+    private List<Departamento> departamentos;
     
     // Constructor privado para evitar instanciación externa
     private Listas() {
         clientes = new ArrayList<>();
+        departamentos = new ArrayList<>();
     }
     
     // Método para obtener la instancia única de la clase
@@ -22,8 +24,8 @@ public class Listas {
         return instancia;
     }
     
+//------------------------------------------------------------------------------
     // Métodos para obtener y manipular las listas de clientes
-    
     public List<Cliente> getClientes() {
         return clientes;
     }
@@ -41,6 +43,26 @@ public class Listas {
         
         // Agregar todos los clientes obtenidos de la nueva lista
         clientes.addAll(nuevaLista);
+    }
+//------------------------------------------------------------------------------
+    //Manipulacion de la Lista Departamentos
+    public List<Departamento> getDepartamentos() {
+        return departamentos;
+    }
+    
+    public void addDepartamento(Departamento departamento) {
+        departamentos.add(departamento);
+    }
+    
+    public void removeDepartamento(Departamento departamento) {
+        departamentos.remove(departamento);
+    }
+    public void actualizarListaDepartamentos(List<Departamento> nuevaLista) {
+        // Limpiar la lista existente
+        departamentos.clear();
+        
+        // Agregar todos los clientes obtenidos de la nueva lista
+        departamentos.addAll(nuevaLista);
     }
     
 }

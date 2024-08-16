@@ -17,24 +17,24 @@ public class ClienteDAO {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        
+
         List<Cliente> clientes = new ArrayList<>();
         Cliente cliente = null;
-        
+
         try {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement(SQL_SELECT);
             rs = ps.executeQuery();
-            
+
             while (rs.next()) {
                 cliente = new Cliente(); //Crear un nuevo cliente por cada loop
-                
+
                 cliente.setIdCliente(rs.getInt("id_cliente")); //Agregar los datos obtenidos del rs al cliente creado
                 cliente.setNombreCliente(rs.getString("nombre_cliente"));
                 cliente.setEmail(rs.getString("email"));
                 cliente.setTelefono(rs.getString("telefono"));
                 cliente.setIdTipoCliente(rs.getInt("id_tipoCliente"));
-                
+
                 clientes.add(cliente); //Agregar al cliente a la lista
             }
         } catch (SQLException e) {
@@ -65,7 +65,7 @@ public class ClienteDAO {
             ps.setInt(4, cliente.getIdTipoCliente()); // Cuarto parámetro
             ps.executeUpdate(); // Ejecutar la consulta
 
-            System.out.println("(\"----Cliente agregado correctamente(\"----");
+            System.out.println("----Cliente agregado correctamente----");
         } catch (SQLException e) {
             System.out.println("Ocurrió un error al agregar un cliente");
             e.printStackTrace();
@@ -79,25 +79,25 @@ public class ClienteDAO {
         }
     }
 
-    public void actualizarCliente(int idCliente, String nombre, String email, String telefono, int idTipoCliente) {
+    public void actualizarCliente(Cliente cliente) {
         Connection conn = null;
         try {
             conn = Conexion.getConnection();
             CallableStatement stmt = conn.prepareCall(SQL_UPDATE_CLIENTE);
 
-            stmt.setInt(1, idCliente);      // Primer parámetro
-            stmt.setString(2, nombre);      // Segundo parámetro
-            stmt.setString(3, email);       // Tercer parámetro
-            stmt.setString(4, telefono);    // Cuarto parámetro
-            stmt.setInt(5, idTipoCliente);  // Quinto parámetro
+            stmt.setInt(1, cliente.getIdCliente());      // Primer parámetro
+            stmt.setString(2, cliente.getNombreCliente());      // Segundo parámetro
+            stmt.setString(3, cliente.getEmail());       // Tercer parámetro
+            stmt.setString(4, cliente.getTelefono());    // Cuarto parámetro
+            stmt.setInt(5, cliente.getIdTipoCliente());  // Quinto parámetro
 
             stmt.executeUpdate(); // Ejecutar el procedimiento almacenado
-            System.out.println("(\"----Cliente actualizado correctamente(\"----");
+            System.out.println("----Cliente actualizado correctamente----");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
-                Conexion.close(conn); // Cerrar la conexion
+                Conexion.close(conn); // Cerrar la conexión
             } catch (SQLException e) {
                 System.out.println("Ocurrió un error al cerrar conexión");
             }
