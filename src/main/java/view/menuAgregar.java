@@ -3,6 +3,9 @@ package view;
 public class menuAgregar extends javax.swing.JPanel {
 
     agClientes ac = new agClientes();
+    agProveedores ap = new agProveedores();
+    agDepartamentos ad = new agDepartamentos();
+    agTrabajadores at = new agTrabajadores();
     
     public menuAgregar() {
         initComponents();
@@ -276,7 +279,9 @@ public class menuAgregar extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
-        // TODO add your handling code here:
+        
+        at.setVisible(true);
+        
     }//GEN-LAST:event_btnClientes1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -284,11 +289,15 @@ public class menuAgregar extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        
+        ap.setVisible(true);
+        
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void btnClientes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes2ActionPerformed
-        // TODO add your handling code here:
+        
+        ad.setVisible(true);
+        
     }//GEN-LAST:event_btnClientes2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

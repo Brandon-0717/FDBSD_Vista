@@ -6,6 +6,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     //-------------------------------------------
     menuAgregar ma = new menuAgregar();
     menuEditar me = new menuEditar(edc);
+    menuConsultar mc = new menuConsultar();
     EditarClientes ec = new EditarClientes();
     
     
@@ -121,7 +122,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
-        
+        jpCapsula.removeAll();//eliminar lo que ya hay en el panel "contenedor"
+        mc.setSize(700, 500);//establecer el tamano de la ventana nueva
+        jpCapsula.add(mc);//agregar la ventana nueva al panel de "contenido"
+        jpCapsula.revalidate();
+        jpCapsula.repaint();
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
