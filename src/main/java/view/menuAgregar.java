@@ -1,5 +1,8 @@
 package view;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 public class menuAgregar extends javax.swing.JPanel {
 
     agClientes ac = new agClientes();
@@ -7,14 +10,16 @@ public class menuAgregar extends javax.swing.JPanel {
     agDepartamentos ad = new agDepartamentos();
     agTrabajadores at = new agTrabajadores();
     agSalarios as = new agSalarios();
+    agProyectos apr = new agProyectos();
+
+    //ICONOS
+    ImageIcon iconElegir = new ImageIcon("src/main/java/icons/Elegir.png");
+    //--------------
     
     public menuAgregar() {
         initComponents();
     }
 
-    
-    
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -285,38 +290,51 @@ public class menuAgregar extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        
+
         as.setVisible(true);
         as.listarTrabajadores();
-        
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
-        
+
         at.setVisible(true);
-        
+
     }//GEN-LAST:event_btnClientes1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
+        String mopt[] = {"Proyectos", "Proyectos en curso"};
+        int opt = JOptionPane.showOptionDialog(null, "Seleccione una opción", "Selección", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, iconElegir, mopt, mopt[0]);
+
+        switch (opt) {
+            case 0:
+                apr.setVisible(true);
+                apr.listarClientes();
+                break;
+            case 1:
+                //PENDIENTE AGREGAR PROYECTOS EN CURSO
+                break;
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        
+
         ap.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void btnClientes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes2ActionPerformed
-        
+
         ad.setVisible(true);
-        
+
     }//GEN-LAST:event_btnClientes2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+
         ac.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

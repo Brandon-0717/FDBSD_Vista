@@ -118,9 +118,11 @@ public class menuConsultar extends javax.swing.JPanel {
         switch(opt){
             case 0:
                 pr.setVisible(true);
+                pr.listarProyectos();
                 break;        
             case 1:
                 pec.setVisible(true);
+                pec.listarProyectosEnCurso();
                 break;     
         }
         

@@ -242,24 +242,32 @@ public class agSalarios extends javax.swing.JFrame {
 
         Fondo.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 640, 150));
 
+        txtMonto.setBackground(new java.awt.Color(194, 209, 202));
+        txtMonto.setBorder(null);
         txtMonto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoActionPerformed(evt);
             }
         });
-        Fondo.add(txtMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 180, -1));
+        Fondo.add(txtMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 180, 30));
 
         jLabel1.setText("Monto:");
-        Fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, -1, -1));
+        Fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, -1, 30));
 
+        txtDia.setBackground(new java.awt.Color(194, 209, 202));
         txtDia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Fondo.add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 70, -1));
+        txtDia.setBorder(null);
+        Fondo.add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 70, 20));
 
+        txtMes.setBackground(new java.awt.Color(194, 209, 202));
         txtMes.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Fondo.add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 70, -1));
+        txtMes.setBorder(null);
+        Fondo.add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 70, 20));
 
+        txtAño.setBackground(new java.awt.Color(194, 209, 202));
         txtAño.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Fondo.add(txtAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 70, -1));
+        txtAño.setBorder(null);
+        Fondo.add(txtAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 70, 20));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Día");
@@ -272,8 +280,11 @@ public class agSalarios extends javax.swing.JFrame {
         Fondo.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, -1, -1));
 
         jLabel6.setText("Periodo:");
-        Fondo.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, -1, -1));
-        Fondo.add(txtPeriodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 180, -1));
+        Fondo.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, -1, 30));
+
+        txtPeriodo.setBackground(new java.awt.Color(194, 209, 202));
+        txtPeriodo.setBorder(null);
+        Fondo.add(txtPeriodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 180, 30));
 
         btnGuardar.setBackground(new java.awt.Color(118, 202, 230));
         btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

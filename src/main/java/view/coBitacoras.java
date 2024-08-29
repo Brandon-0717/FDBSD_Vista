@@ -540,17 +540,17 @@ public class coBitacoras extends javax.swing.JFrame {
 
         tabBTcambiosDep.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "id_bitácora", "acción", "fecha", "id_departamento", "encargado", "descripción"
+                "id_bitácora", "acción", "fecha", "id_departamento", "nom_depa", "encargado", "descipcion"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

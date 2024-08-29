@@ -528,17 +528,23 @@
             <Component class="javax.swing.JTable" name="tabBTcambiosDep">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="6" rowCount="4">
+                  <Table columnCount="7" rowCount="4">
                     <Column editable="false" title="id_bit&#xe1;cora" type="java.lang.Object"/>
                     <Column editable="false" title="acci&#xf3;n" type="java.lang.Object"/>
                     <Column editable="false" title="fecha" type="java.lang.Object"/>
                     <Column editable="false" title="id_departamento" type="java.lang.Object"/>
+                    <Column editable="false" title="nom_depa" type="java.lang.Object"/>
                     <Column editable="false" title="encargado" type="java.lang.Object"/>
-                    <Column editable="false" title="descripci&#xf3;n" type="java.lang.Object"/>
+                    <Column editable="false" title="descipcion" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
