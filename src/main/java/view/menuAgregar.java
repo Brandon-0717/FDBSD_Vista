@@ -6,6 +6,7 @@ public class menuAgregar extends javax.swing.JPanel {
     agProveedores ap = new agProveedores();
     agDepartamentos ad = new agDepartamentos();
     agTrabajadores at = new agTrabajadores();
+    agSalarios as = new agSalarios();
     
     public menuAgregar() {
         initComponents();
@@ -67,6 +68,7 @@ public class menuAgregar extends javax.swing.JPanel {
         jButton6.setText("Herramientas");
         jButton6.setBorder(null);
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setFocusPainted(false);
         jButton6.setPreferredSize(new java.awt.Dimension(210, 100));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +80,7 @@ public class menuAgregar extends javax.swing.JPanel {
         btnClientes.setText("Materiales");
         btnClientes.setBorder(null);
         btnClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClientes.setFocusPainted(false);
         btnClientes.setPreferredSize(new java.awt.Dimension(210, 100));
         btnClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +92,7 @@ public class menuAgregar extends javax.swing.JPanel {
         jButton1.setText("Maquinarias");
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
         jButton1.setPreferredSize(new java.awt.Dimension(210, 100));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +130,7 @@ public class menuAgregar extends javax.swing.JPanel {
         jButton8.setText("Salarios");
         jButton8.setBorder(null);
         jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton8.setFocusPainted(false);
         jButton8.setPreferredSize(new java.awt.Dimension(210, 100));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +142,7 @@ public class menuAgregar extends javax.swing.JPanel {
         btnClientes1.setText("Trabajadores");
         btnClientes1.setBorder(null);
         btnClientes1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClientes1.setFocusPainted(false);
         btnClientes1.setPreferredSize(new java.awt.Dimension(210, 100));
         btnClientes1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,6 +154,7 @@ public class menuAgregar extends javax.swing.JPanel {
         jButton2.setText("Proyectos");
         jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setFocusPainted(false);
         jButton2.setPreferredSize(new java.awt.Dimension(210, 100));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +192,7 @@ public class menuAgregar extends javax.swing.JPanel {
         jButton9.setText("Proveedores");
         jButton9.setBorder(null);
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton9.setFocusPainted(false);
         jButton9.setPreferredSize(new java.awt.Dimension(210, 100));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,6 +204,7 @@ public class menuAgregar extends javax.swing.JPanel {
         btnClientes2.setText("Departamentos");
         btnClientes2.setBorder(null);
         btnClientes2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnClientes2.setFocusPainted(false);
         btnClientes2.setPreferredSize(new java.awt.Dimension(210, 100));
         btnClientes2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,6 +216,7 @@ public class menuAgregar extends javax.swing.JPanel {
         jButton3.setText("Clientes");
         jButton3.setBorder(null);
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setFocusPainted(false);
         jButton3.setPreferredSize(new java.awt.Dimension(210, 100));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,7 +285,10 @@ public class menuAgregar extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        
+        as.setVisible(true);
+        as.listarTrabajadores();
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed

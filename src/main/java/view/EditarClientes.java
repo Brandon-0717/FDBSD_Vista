@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class EditarClientes extends javax.swing.JFrame {
@@ -41,6 +43,18 @@ public class EditarClientes extends javax.swing.JFrame {
     }
 //------------------------------------------------------------------------------
 
+    //--------------------------------------------------------------------------
+    public static void centrarTextoEnTabla(JTable table) {//metodo general para centrar texto de tablas
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(DefaultTableCellRenderer.CENTER);
+        
+        // Aplicar el renderizador a todas las columnas de la tabla
+        for (int i = 0; i < table.getColumnCount(); i++) {
+            table.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+        }
+    }
+    //--------------------------------------------------------------------------
+    
     public void listarClientes() {
 
         Connection conn = null;
@@ -68,6 +82,9 @@ public class EditarClientes extends javax.swing.JFrame {
 
                 modeloTabla.addRow(fila); // Agregar la fila a la tabla
             }
+            
+            centrarTextoEnTabla(ecTablaClientes);
+            
         } catch (SQLException e) {
             System.out.println("Ocurrió un error al listar clientes");
             e.printStackTrace();
@@ -280,6 +297,7 @@ public class EditarClientes extends javax.swing.JFrame {
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("Eliminar");
+        btnEliminar.setFocusPainted(false);
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -291,6 +309,7 @@ public class EditarClientes extends javax.swing.JFrame {
         btnEditar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
         btnEditar.setText("Editar");
+        btnEditar.setFocusPainted(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -342,11 +361,7 @@ public class EditarClientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;
-    private javax.swing.JLabel JLeditar3;
-    private javax.swing.JLabel JLeditar4;
     private javax.swing.JLabel JLeditar5;
-    private javax.swing.JTable TablaClientes;
-    private javax.swing.JTable TablaClientes1;
     private javax.swing.JTextField auxIDcliente;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
@@ -360,17 +375,7 @@ public class EditarClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JPanel jpFondo;
-    private javax.swing.JPanel jpFondo1;
     private javax.swing.JPanel jpSuperior3;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtEmail1;
     // End of variables declaration//GEN-END:variables
 }

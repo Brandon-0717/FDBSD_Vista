@@ -44,7 +44,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(41, 56, 57));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnAgregar.setBackground(new java.awt.Color(255, 250, 248));
         btnAgregar.setText("Agregar");
+        btnAgregar.setFocusPainted(false);
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
@@ -52,10 +54,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 24, 88, 40));
 
+        jButton2.setBackground(new java.awt.Color(255, 250, 248));
         jButton2.setText("Eliminar");
+        jButton2.setFocusPainted(false);
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 255, 88, 40));
 
+        jButton3.setBackground(new java.awt.Color(255, 250, 248));
         jButton3.setText("Consultar");
+        jButton3.setFocusPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -63,7 +69,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 385, 88, 40));
 
+        btnEditar.setBackground(new java.awt.Color(255, 250, 248));
         btnEditar.setText("Editar");
+        btnEditar.setFocusPainted(false);
         btnEditar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnEditarMouseClicked(evt);
